@@ -61,3 +61,15 @@ timeseries-docker:
 
 timeseries-podman:
 	podman run -p 6379:6379 -it -d --rm redislabs/redistimeseries
+
+build:
+	docker-compose build
+
+run:
+	docker-compose up -d
+
+bash:
+	docker-compose exec test bash
+
+clean:
+	docker-compose down -v
